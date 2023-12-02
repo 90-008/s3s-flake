@@ -12,7 +12,6 @@
     buildPhase = ''
       patch s3s.py -i ${./pwd.patch}
       echo "#!${config.deps.stdenv.shell}" >> s3s
-      echo "echo \$PWD" >> s3s
       echo "${config.public.pyEnv}/bin/python $out/lib/s3s/s3s.py \$@" >> s3s
       chmod +x s3s
     '';
