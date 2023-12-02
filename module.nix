@@ -10,27 +10,46 @@ in {
         type = t.package;
         description = "s3s package to use";
       };
-      workingDir = l.mkOption {
+      workingDirectory = l.mkOption {
         type = t.str;
         description = "Path relative to $HOME to use for the working directory of s3s";
         default = ".config/s3s";
       };
+      timerDuration = l.mkOption {
+        type = t.str;
+        description = "The duration of the wait in between s3s executions (systemd value for OnUnitActiveSec)";
+        default = "5 min";
+      };
     };
   };
   config = l.mkIf cfg.enable {
+    systemd.user.timers.s3s = {
+      Install = {
+        WantedBy = ["timers.target"];
+      };
+      Unit = {
+        Description = "s3s timer";
+        Requires = ["s3s.service"];
+      };
+      Timer = {
+        Unit = ["s3s.service"];
+        OnBootSec = "1 min";
+        OnUnitActiveSec = cfg.period;
+      };
+    };
     systemd.user.services.s3s = {
       Install = {
         WantedBy = ["default.target"];
       };
       Unit = {
         Description = "s3s";
-        ConditionPathExists="%h/${cfg.workingDir}/config.txt";
+        ConditionPathExists="%h/${cfg.workingDirectory}/config.txt";
+        Wants = ["s3s.timer"];
       };
       Service = {
-        ExecStart = "${cfg.package}/bin/s3s -r -M";
-        WorkingDirectory = "%h/${cfg.workingDir}";
-        Restart = "on-failure";
-        RestartSec = 10;
+        Type = "oneshot";
+        ExecStart = "${cfg.package}/bin/s3s -r";
+        WorkingDirectory = "%h/${cfg.workingDirectory}";
       };
     };
   };
