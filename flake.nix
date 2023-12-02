@@ -14,6 +14,7 @@
       modules = [
         {
           mkDerivation.src = inp.src;
+          name = "s3s-${inp.src.shortRev}";
           version = inp.src.shortRev;
         }
         ./default.nix

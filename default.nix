@@ -8,8 +8,6 @@
     dream2nix.modules.dream2nix.pip
   ];
 
-  name = "s3s";
-
   mkDerivation = {
     buildPhase = ''
       patch s3s.py -i ${./pwd.patch}
