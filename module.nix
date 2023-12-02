@@ -24,7 +24,7 @@ in {
       };
       Unit = {
         Description = "s3s";
-        ConditionPathExists="~/${cfg.workingDir}/config.txt";
+        ConditionPathExists="%h/${cfg.workingDir}/config.txt";
       };
       Service = {
         ExecStart = "${cfg.package}/bin/s3s -r -M";
