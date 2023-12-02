@@ -28,6 +28,7 @@ in {
       };
       Service = {
         ExecStart = "${cfg.package}/bin/s3s -r -M";
+        RootDirectory = "~";
         WorkingDirectory = cfg.workingDir;
         Restart = "on-failure";
         RestartSec = 10;
