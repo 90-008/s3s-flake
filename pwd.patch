@@ -1,0 +1,7 @@
+23,26c23
+< if getattr(sys, 'frozen', False): # place config.txt in same directory as script (bundled or not)
+< 	app_path = os.path.dirname(sys.executable)
+< elif __file__:
+< 	app_path = os.path.dirname(__file__)
+---
+> app_path = os.getcwd()
