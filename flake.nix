@@ -14,6 +14,8 @@
       modules = [
         {
           mkDerivation.src = inp.src;
+          # Q: why not use the version in the s3s code?
+          # A: revision gives more info and context since we check for new commits daily.
           name = "s3s-${inp.src.shortRev}";
           version = inp.src.shortRev;
         }
