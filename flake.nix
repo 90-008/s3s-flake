@@ -8,8 +8,7 @@
   outputs = inp: let
     system = "x86_64-linux";
     pkgs = inp.nixpkgs.legacyPackages.${system};
-  in {
-    packages.${system}.default = inp.dream2nix.lib.evalModules {
+    package = inp.dream2nix.lib.evalModules {
       packageSets.nixpkgs = pkgs;
       modules = [
         {
@@ -27,5 +26,11 @@
         }
       ];
     };
+  in {
+    homeManagerModule = {lib, pkgs, ...}: {
+      imports = [./module.nix];
+      services.s3s.package = lib.mkDefault inp.self.packages.${pkgs.system}.default; 
+    };
+    packages.${system}.default = package;
   };
 }
