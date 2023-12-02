@@ -34,7 +34,7 @@ in {
       Timer = {
         Unit = ["s3s.service"];
         OnBootSec = "1 min";
-        OnUnitActiveSec = cfg.period;
+        OnUnitActiveSec = cfg.timerDuration;
       };
     };
     systemd.user.services.s3s = {
