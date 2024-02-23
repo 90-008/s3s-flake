@@ -109,11 +109,11 @@
     "src": {
       "flake": false,
       "locked": {
-        "lastModified": 1708083513,
-        "narHash": "sha256-RyYLNFhExlH9mhZHFo+f8dyHJ4TSvqEnDu/i6Pb9V3s=",
+        "lastModified": 1708583870,
+        "narHash": "sha256-HgmXa5a59f/Fsy57I95LqwMWYNlwsSpVvFlw1HpLYTc=",
         "owner": "frozenpandaman",
         "repo": "s3s",
-        "rev": "233b9899c1ed123c0b26004b037483eaa72765f7",
+        "rev": "1975f3f2324afc160c01703aa26e3ddec23707ed",
         "type": "github"
       },
       "original": {
