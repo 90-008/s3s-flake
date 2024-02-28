@@ -9,11 +9,11 @@
         "pyproject-nix": "pyproject-nix"
       },
       "locked": {
-        "lastModified": 1708972219,
-        "narHash": "sha256-TOitNtCW1wwM4iFx7+M/PAZqviLs0+KCUBihIs6Wu+0=",
+        "lastModified": 1709060111,
+        "narHash": "sha256-uavmzyPdThL8T1eWBqwf1Do6KNfQIe1PAjlcY/s/h+0=",
         "owner": "nix-community",
         "repo": "dream2nix",
-        "rev": "02a61c9aeb3ce3d1c7a7bbe33481311e6d6cc8e3",
+        "rev": "06675abc58d707a20defdacc940c308d58dd7f01",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1708807242,
-        "narHash": "sha256-sRTRkhMD4delO/hPxxi+XwLqPn8BuUq6nnj4JqLwOu0=",
+        "lastModified": 1708984720,
+        "narHash": "sha256-gJctErLbXx4QZBBbGp78PxtOOzsDaQ+yw1ylNQBuSUY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "73de017ef2d18a04ac4bfd0c02650007ccb31c2a",
+        "rev": "13aff9b34cc32e59d35c62ac9356e4a41198a538",
         "type": "github"
       },
       "original": {
@@ -109,11 +109,11 @@
     "src": {
       "flake": false,
       "locked": {
-        "lastModified": 1708791132,
-        "narHash": "sha256-Z46eCm9lrGs6FwpVPY5EAcGzqytnYsmRwvN+vTWwq1I=",
+        "lastModified": 1709041931,
+        "narHash": "sha256-Uce8MQBH7rVZ/fWwjDcbn2BxPA8oGdWG+lh1nO1Dxmc=",
         "owner": "frozenpandaman",
         "repo": "s3s",
-        "rev": "469c4eff1fe312642a3dc9becb2a67740c14b00b",
+        "rev": "81030982fdbea2bd2188be33597c82958e877544",
         "type": "github"
       },
       "original": {
