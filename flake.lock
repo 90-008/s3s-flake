@@ -9,11 +9,11 @@
         "pyproject-nix": "pyproject-nix"
       },
       "locked": {
-        "lastModified": 1717094186,
-        "narHash": "sha256-u4u1nwxHzR65PdVLXVk6hnKFWxilDXiKgpT8CYGW5hM=",
+        "lastModified": 1717180497,
+        "narHash": "sha256-E8p65ytXxTC0pu79NFtLugCABiHf+W5he9WqaWau9zg=",
         "owner": "nix-community",
         "repo": "dream2nix",
-        "rev": "da8ac0645bca5097cab252020eea0ad79231e794",
+        "rev": "3c6e77a4fe54e02db2cc8237966a984dfcc9c58d",
         "type": "github"
       },
       "original": {
@@ -109,11 +109,11 @@
     "src": {
       "flake": false,
       "locked": {
-        "lastModified": 1715216110,
-        "narHash": "sha256-OUpAvm7XBhfj9ztsj5MgCEqANEeBvBRNDVHJ25XsnFc=",
+        "lastModified": 1717153262,
+        "narHash": "sha256-w0ML+XGxN2Kmjy+72vqVBFxuEk1wNctHPFkjXxn3rqY=",
         "owner": "frozenpandaman",
         "repo": "s3s",
-        "rev": "f1746f34558cf6c473bcb7a6475cabba6f1417f9",
+        "rev": "5cd0c5e25bcd1e5207ce7e0d8be4cc5cc25ddd44",
         "type": "github"
       },
       "original": {
